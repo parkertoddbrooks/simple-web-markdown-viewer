@@ -516,7 +516,7 @@
             <p>Drag and drop a .md file here to view it</p>
             <p>— or —</p>
             <button onclick="loadNewFile()">📂 Load File</button>
-            <p class="tip">💡 Tip: Using "Load File" enables auto-refresh in Chrome/Edge</p>
+            <p class="tip" id="auto-refresh-tip" style="display: none;">💡 Tip: Using "Load File" enables auto-refresh</p>
         </div>
     </div>
 
@@ -581,6 +581,12 @@
         document.addEventListener('DOMContentLoaded', () => {
             setupDragAndDrop();
             loadThemePreference();
+
+            // Show auto-refresh tip only in browsers that support it
+            if ('showOpenFilePicker' in window) {
+                const tip = document.getElementById('auto-refresh-tip');
+                if (tip) tip.style.display = 'block';
+            }
         });
 
         function setupDragAndDrop() {
@@ -882,21 +888,12 @@
                     if (err.name !== 'AbortError') {
                         console.log('File System Access API error:', err);
                     }
+                    return; // User cancelled, don't proceed
                 }
             }
 
-            // Reset everything and show drop zone
-            currentFile = null;
-            lastModified = null;
-            fileHandle = null;
-            if (refreshInterval) {
-                clearInterval(refreshInterval);
-            }
-
-            // Show drop zone
-            document.getElementById('drop-zone').classList.remove('hidden');
-            document.getElementById('viewer-container').style.display = 'none';
-            document.getElementById('markdown-content').innerHTML = '';
+            // Fallback: Use traditional file input for Safari/Firefox
+            document.getElementById('file-input').click();
         }
 
         function updateLastModified() {
