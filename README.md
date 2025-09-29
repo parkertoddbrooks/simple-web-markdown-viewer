@@ -4,16 +4,25 @@ A lightweight, single-file markdown viewer for fast and easy document review.
 
 ## Features
 
-- **Zero Configuration** - Just open the HTML file in any browser
-- **Drag & Drop** - Load markdown files instantly
-- **Auto-Refresh** - Automatically reload when files change (Chrome/Edge only)
+### Core Features (Both Versions)
 - **Syntax Highlighting** - 180+ languages supported via highlight.js
 - **Dark Mode** - Toggle between light and dark themes
 - **Table of Contents** - Auto-generated navigation for long documents
 - **GitHub Flavored Markdown** - Tables, task lists, and strikethrough
 - **Mermaid Diagrams** - Flowcharts, sequence diagrams, and more
 - **Math Equations** - KaTeX rendering for LaTeX expressions
-- **Export & Print** - Save as HTML or print with optimized layouts
+- **Print Support** - Print-optimized layouts
+
+### Web Browser Version
+- **Zero Configuration** - Just open the HTML file in any browser
+- **Drag & Drop** - Load markdown files instantly
+- **Auto-Refresh** - Chrome/Edge only via File System Access API
+- **Export HTML** - Save as standalone HTML file
+
+### BBEdit Preview Template
+- **True Auto-Refresh** - Instant updates when you save in BBEdit
+- **Seamless Integration** - Edit and preview in one app
+- **Works Everywhere** - No browser-specific APIs required
 
 ## Usage
 
