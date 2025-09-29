@@ -21,15 +21,21 @@ When installed, you'll have a beautiful, feature-rich markdown preview in BBEdit
 
 Open BBEdit and navigate to the Preview Templates folder:
 
-**Via Menu:**
+**Via BBEdit Menu:**
 - `BBEdit` → `Folders` → `Preview Templates`
 
-**Via Finder:**
-- Path: `~/Library/Application Support/BBEdit/Preview Templates/`
+**Via Finder (Go to Folder):**
+1. In Finder, press `⇧⌘G` (Shift-Command-G) or use menu `Go` → `Go to Folder...`
+2. Paste this path: `~/Library/Application Support/BBEdit/Preview Templates/`
+3. Click "Go"
 
-If the folder doesn't exist, create it:
+**Via Terminal:**
 ```bash
+# Create folder if it doesn't exist
 mkdir -p ~/Library/Application\ Support/BBEdit/Preview\ Templates/
+
+# Open in Finder
+open ~/Library/Application\ Support/BBEdit/Preview\ Templates/
 ```
 
 ### Step 2: Copy the Template
@@ -51,7 +57,24 @@ Or drag and drop the file into the folder in Finder.
 
 **Tip:** BBEdit remembers your template choice for each file type!
 
-## Features & Usage
+## Usage - Web
+
+The web version (`markdown-viewer.html`) can be used standalone in any browser:
+
+1. Open `markdown-viewer.html` in your browser
+2. Load a markdown file using one of two methods:
+   - **Drag and drop** - Quick loading, but no auto-refresh
+   - **Click "Load File" button** - Enables auto-refresh in Chrome/Edge
+3. Use the toolbar buttons to navigate and interact with your document
+
+### Auto-Refresh (Chrome/Edge Only)
+When you load a file using the "Load File" button in Chrome or Edge, the viewer will automatically detect changes to the file and refresh the display every 2 seconds. This is perfect for editing markdown in your favorite editor while previewing changes in real-time.
+
+**Note:** Auto-refresh requires the File System Access API, which is only available in Chrome, Edge, and Opera. Safari and Firefox users can still use the viewer with drag-and-drop or the Load button, but will need to manually click the "Refresh" button to see updates.
+
+## Usage - BBEdit
+
+The BBEdit template provides a seamless markdown preview experience directly within BBEdit:
 
 ### Table of Contents
 - Click the **📑 TOC** button to show/hide the sidebar
