@@ -45,8 +45,6 @@ Use the enhanced viewer as a BBEdit preview template with **true auto-refresh** 
 - ✅ **Seamless workflow** - Edit and preview in one app
 - ✅ **All features included** - Syntax highlighting, Mermaid, KaTeX, TOC, dark mode
 
-**Note:** BBEdit version available in the `bbedit-template` branch.
-
 ## Requirements
 
 Modern web browser with JavaScript enabled. No installation or build process required.
