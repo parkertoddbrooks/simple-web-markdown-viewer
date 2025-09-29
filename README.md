@@ -26,7 +26,13 @@ Modern web browser with JavaScript enabled. No installation or build process req
 
 ## Demo
 
-Load `demo.md` to see all features in action.
+Load `demo/demo.md` to see all features in action.
+
+![Landing Page](images/01.png)
+
+![Light Mode View](images/02.png)
+
+![Dark Mode View](images/03.png)
 
 ## License
 
