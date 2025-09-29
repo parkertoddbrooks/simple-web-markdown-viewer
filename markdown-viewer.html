@@ -778,7 +778,21 @@
         }
 
         async function refreshContent() {
-            // Try to use File System Access API first
+            // First priority: If we have a fileHandle, use it to refresh silently
+            if (fileHandle) {
+                try {
+                    const file = await fileHandle.getFile();
+                    await loadFile(file);
+                    showStatus('Content refreshed', 2000);
+                    return;
+                } catch (err) {
+                    console.log('Error refreshing from file handle:', err);
+                    // Handle lost, clear it and fall through to file picker
+                    fileHandle = null;
+                }
+            }
+
+            // Second priority: Use File System Access API with file picker
             if ('showOpenFilePicker' in window) {
                 try {
                     const [handle] = await window.showOpenFilePicker({
