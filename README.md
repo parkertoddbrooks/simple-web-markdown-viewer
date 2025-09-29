@@ -17,17 +17,35 @@ A lightweight, single-file markdown viewer for fast and easy document review.
 
 ## Usage
 
+### Web Browser Version
+
 1. Open `markdown-viewer.html` in your browser
 2. Load a markdown file using one of two methods:
    - **Drag and drop** - Quick loading, but no auto-refresh
    - **Click "Load File" button** - Enables auto-refresh in Chrome/Edge
 3. Use the toolbar buttons to navigate and interact with your document
 
-### Auto-Refresh Feature
-
-When you load a file using the "Load File" button in **Chrome** or **Edge**, the viewer will automatically detect changes to the file and refresh the display every 2 seconds. This is perfect for editing markdown in your favorite editor while previewing changes in real-time.
+**Auto-Refresh Feature:** When you load a file using the "Load File" button in **Chrome** or **Edge**, the viewer will automatically detect changes to the file and refresh the display every 2 seconds. This is perfect for editing markdown in your favorite editor while previewing changes in real-time.
 
 **Note:** Auto-refresh requires the File System Access API, which is only available in Chrome, Edge, and Opera. Safari and Firefox users can still use the viewer with drag-and-drop or the Load button, but will need to manually click the "Refresh" button to see updates.
+
+### BBEdit Preview Template
+
+Use the enhanced viewer as a BBEdit preview template with **true auto-refresh** in all browsers:
+
+**Installation:**
+1. In Finder, press `⇧⌘G` and paste: `~/Library/Application Support/BBEdit/Preview Templates/`
+2. Copy `bbedit-preview-template.html` to this folder
+3. In BBEdit, open any `.md` file and press `⌃⌘P`
+4. Select `bbedit-preview-template.html` from the Templates menu
+
+**Benefits:**
+- ✅ **True auto-refresh** - Updates instantly when you save (no 2-second polling)
+- ✅ **Works in all browsers** - No File System Access API needed
+- ✅ **Seamless workflow** - Edit and preview in one app
+- ✅ **All features included** - Syntax highlighting, Mermaid, KaTeX, TOC, dark mode
+
+**Note:** BBEdit version available in the `bbedit-template` branch.
 
 ## Requirements
 
