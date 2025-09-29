@@ -148,7 +148,7 @@ $$
 
 ## Images
 
-![Demo Image](demo/demo-image.png)
+![Demo Image](demo-image.png)
 
 ## Links
 
