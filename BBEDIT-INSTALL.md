@@ -11,9 +11,9 @@ When installed, you'll have a beautiful, feature-rich markdown preview in BBEdit
 - ✅ **Math equations** (KaTeX for LaTeX rendering)
 - ✅ **Table of Contents** with smooth scrolling
 - ✅ **Dark mode toggle** (persists across sessions)
-- ✅ **Export to HTML** functionality
-- ✅ **Print-optimized** layouts
+- ✅ **Print support** via `⌘P` (print-optimized layouts)
 - ✅ **Auto-refresh** when you save/edit in BBEdit
+- ✅ **Image support** with relative paths
 
 ## Installation
 
@@ -63,13 +63,8 @@ Or drag and drop the file into the folder in Finder.
 - Your preference is saved in localStorage
 - Syncs highlight.js and Mermaid themes automatically
 
-### Export
-- Click the **💾 Export** button to download as standalone HTML
-- Includes all styling and rendered content
-- Perfect for sharing or archiving
-
 ### Print
-- Click the **🖨️ Print** button or use `⌘P`
+- Use `⌘P` to print
 - Print-optimized CSS removes buttons and sidebar
 - Clean, professional output
 
@@ -80,6 +75,16 @@ The preview automatically updates when you:
 - BBEdit detects file changes
 
 No need to click refresh - it just works!
+
+### Images
+Images in your markdown work with relative paths:
+
+```markdown
+![My Image](images/photo.jpg)
+![Demo](demo/demo-image.png)
+```
+
+BBEdit resolves image paths relative to your markdown file location, so if your markdown is in the project root, images in subdirectories will load correctly.
 
 ## Supported Markdown Features
 
@@ -177,13 +182,14 @@ After editing, BBEdit automatically uses the updated template.
 | Math Equations | ✅ | ✅ |
 | Dark Mode | ✅ | ✅ |
 | Table of Contents | ✅ | ✅ |
-| Export HTML | ✅ | ✅ |
-| Print | ✅ | ✅ |
+| Export HTML | ✅ | ❌ (Use BBEdit's export) |
+| Print | ✅ Button | ✅ Via `⌘P` |
 | Drag & Drop Files | ✅ | ❌ (Not needed) |
 | Auto-refresh | Only Chrome/Edge | ✅ All browsers |
 | File System Access API | Required for auto-refresh | ❌ (BBEdit handles it) |
 | Standalone | ✅ | ❌ (Requires BBEdit) |
 | Integration | Web browser | Native to BBEdit |
+| Image Support | ✅ | ✅ Relative paths |
 
 ## Benefits of BBEdit Template
 
