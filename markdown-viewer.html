@@ -99,6 +99,34 @@
         .drop-message p {
             font-size: 1.2em;
             opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .drop-message .tip {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .drop-message button {
+            pointer-events: auto;
+            background: rgba(255,255,255,0.9);
+            color: #667eea;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .drop-message button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         #viewer-container {
@@ -486,6 +514,9 @@
         <div class="drop-message">
             <h1>📄 Markdown Viewer</h1>
             <p>Drag and drop a .md file here to view it</p>
+            <p>— or —</p>
+            <button onclick="loadNewFile()">📂 Load File</button>
+            <p class="tip">💡 Tip: Using "Load File" enables auto-refresh in Chrome/Edge</p>
         </div>
     </div>
 
