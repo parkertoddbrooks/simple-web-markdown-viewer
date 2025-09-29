@@ -582,10 +582,15 @@
             setupDragAndDrop();
             loadThemePreference();
 
-            // Show auto-refresh tip only in browsers that support it
-            if ('showOpenFilePicker' in window) {
-                const tip = document.getElementById('auto-refresh-tip');
-                if (tip) tip.style.display = 'block';
+            // Update auto-refresh tip based on browser support
+            const tip = document.getElementById('auto-refresh-tip');
+            if (tip) {
+                if ('showOpenFilePicker' in window) {
+                    tip.textContent = '💡 Tip: Using "Load File" enables auto-refresh';
+                } else {
+                    tip.textContent = '💡 Tip: In Chrome/Edge "Load File" enables auto-refresh';
+                }
+                tip.style.display = 'block';
             }
         });
 
