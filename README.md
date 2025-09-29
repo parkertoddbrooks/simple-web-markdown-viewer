@@ -31,7 +31,7 @@ A lightweight, single-file markdown viewer for fast and easy document review.
 
 ### BBEdit Preview Template
 
-Use the enhanced viewer as a BBEdit preview template with **true auto-refresh** in all browsers:
+Use the enhanced viewer as a BBEdit preview template with **true auto-refresh** in BBEdit:
 
 **Installation:**
 1. In Finder, press `⇧⌘G` and paste: `~/Library/Application Support/BBEdit/Preview Templates/`
