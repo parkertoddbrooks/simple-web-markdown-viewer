@@ -47,7 +47,13 @@ Use the enhanced viewer as a BBEdit preview template with **true auto-refresh** 
 
 ## Requirements
 
-Modern web browser with JavaScript enabled. No installation or build process required.
+**Web Version:**
+- Modern web browser with JavaScript enabled
+- No installation or build process required
+
+**BBEdit Version:**
+- BBEdit (macOS)
+- `bbedit-preview-template.html` copied to Preview Templates folder
 
 ## Demo
 
